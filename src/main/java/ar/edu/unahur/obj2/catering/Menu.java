@@ -21,6 +21,14 @@ public class Menu implements Propuesta {
         this.componentes.add(propuesta);
     }
 
+    public void removerPropuesta(Propuesta propuesta) {
+        this.componentes.remove(propuesta);
+    }
+
+    public Boolean esComponenteDirecto(Propuesta propuesta) {
+        return this.componentes.contains(propuesta);
+    }
+
     @Override
     public Double getPrecio() {
         Double precioAcumulado = 0.0;

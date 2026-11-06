@@ -12,6 +12,13 @@ public class Servicio implements Propuesta {
         this.precio = precio;
     }
 
+    public void setPrecio(Double nuevoPrecio) {
+        if (nuevoPrecio < 0) {
+            throw new PrecioNegativoException("El precio del servicio no puede ser negativo.");
+        }
+        this.precio = nuevoPrecio;
+    }
+
     @Override
     public Double getPrecio() {
         return this.precio;
